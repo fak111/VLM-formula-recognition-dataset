@@ -2,12 +2,12 @@ from modelscope.hub.api import HubApi
 from modelscope.hub.constants import Licenses, ModelVisibility
 
 # 配置基本信息
-YOUR_ACCESS_TOKEN = "ms-9fxx7e"  # 填写自己的 api token
+YOUR_ACCESS_TOKEN = "ms-9fxx7e"  # 填写自己的 api token ，获取方式点击：https://modelscope.cn/my/myaccesstoken
 api = HubApi()
 api.login(YOUR_ACCESS_TOKEN)
 
 # 取名字
-owner_name = "xx"  # ModelScope 的用户名，需根据自己情况修改
+owner_name = "xx"  # ModelScope 的用户名
 model_name = "xx"  # 为模型库取个响亮优雅又好听的名字，需根据自己情况修改
 model_id = f"{owner_name}/{model_name}"
 
@@ -16,7 +16,7 @@ api.create_model(
     model_id,
     visibility=ModelVisibility.PUBLIC,
     license=Licenses.APACHE_V2,
-    chinese_name=f"{owner_name}的 latex 分类",
+    chinese_name=f"{owner_name}的书生大模型实战营-公式微调分类比赛",
 )
 
 # 上传模型到仓库
